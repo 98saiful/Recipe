@@ -1,4 +1,4 @@
-package com.sazs.recipe.ui.fragments
+package com.sazs.recipe.ui.fragments.favourites
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
