@@ -1,4 +1,4 @@
-package com.sazs.recipe.data.network
+package com.sazs.recipe.data
 
 import com.sazs.recipe.data.database.RecipesDao
 import com.sazs.recipe.data.database.RecipesEntity
@@ -7,7 +7,7 @@ import javax.inject.Inject
 
 class LocalDataSource @Inject constructor(
     private val recipesDao: RecipesDao
-) {
+){
     fun readRecipes(): Flow<List<RecipesEntity>> {
         return recipesDao.readRecipes()
     }
@@ -23,11 +23,12 @@ class LocalDataSource @Inject constructor(
 //    suspend fun insertFavoriteRecipes(favoritesEntity: FavoritesEntity) {
 //        recipesDao.insertFavoriteRecipe(favoritesEntity)
 //    }
-//
+
+
 //    suspend fun deleteFavoriteRecipe(favoritesEntity: FavoritesEntity) {
 //        recipesDao.deleteFavoriteRecipe(favoritesEntity)
 //    }
-//
+
 //    suspend fun deleteAllFavoriteRecipes() {
 //        recipesDao.deleteAllFavoriteRecipes()
 //    }
