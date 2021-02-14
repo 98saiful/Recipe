@@ -1,7 +1,7 @@
 package com.sazs.recipe.data
 
 import com.sazs.recipe.data.database.RecipesDao
-import com.sazs.recipe.data.database.RecipesEntity
+import com.sazs.recipe.data.database.entities.RecipesEntity
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

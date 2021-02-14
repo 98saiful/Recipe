@@ -1,4 +1,4 @@
-package com.sazs.recipe.data.database
+package com.sazs.recipe.data.database.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

@@ -1,7 +1,8 @@
 package com.sazs.recipe.data.network
 
 import com.sazs.recipe.data.database.RecipesDao
-import com.sazs.recipe.data.database.RecipesEntity
+import com.sazs.recipe.data.database.entities.FavoritesEntity
+import com.sazs.recipe.data.database.entities.RecipesEntity
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
@@ -12,23 +13,23 @@ class LocalDataSource @Inject constructor(
         return recipesDao.readRecipes()
     }
 
-//    fun readFavoriteRecipes(): Flow<List<FavoritesEntity>> {
-//        return recipesDao.readFavoriteRecipes()
-//    }
+    fun readFavoriteRecipes(): Flow<List<FavoritesEntity>> {
+        return recipesDao.readFavoriteRecipes()
+    }
 
     suspend fun insertRecipes(recipesEntity: RecipesEntity) {
         recipesDao.insertRecipes(recipesEntity)
     }
 
-//    suspend fun insertFavoriteRecipes(favoritesEntity: FavoritesEntity) {
-//        recipesDao.insertFavoriteRecipe(favoritesEntity)
-//    }
-//
-//    suspend fun deleteFavoriteRecipe(favoritesEntity: FavoritesEntity) {
-//        recipesDao.deleteFavoriteRecipe(favoritesEntity)
-//    }
-//
-//    suspend fun deleteAllFavoriteRecipes() {
-//        recipesDao.deleteAllFavoriteRecipes()
-//    }
+    suspend fun insertFavoriteRecipes(favoritesEntity: FavoritesEntity) {
+        recipesDao.insertFavoriteRecipe(favoritesEntity)
+    }
+
+    suspend fun deleteFavoriteRecipe(favoritesEntity: FavoritesEntity) {
+        recipesDao.deleteFavoriteRecipe(favoritesEntity)
+    }
+
+    suspend fun deleteAllFavoriteRecipes() {
+        recipesDao.deleteAllFavoriteRecipes()
+    }
 }
