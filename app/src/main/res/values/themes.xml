@@ -40,4 +40,10 @@
         <item name="tabSelectedTextColor">@color/white</item>
     </style>
 
+    <style name="SplashScreenStyle" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
 </resources>
