@@ -11,6 +11,7 @@ import androidx.navigation.findNavController
 import coil.load
 import com.sazs.recipe.R
 import com.sazs.recipe.models.Result
+import com.sazs.recipe.ui.fragments.recipes.RecipesFragmentDirections
 import org.jsoup.Jsoup
 import java.lang.Exception
 
@@ -24,9 +25,9 @@ class RecipesRowBinding {
             Log.d("onRecipeClickListener", "CALLED")
             recipeRowLayout.setOnClickListener {
                 try {
-//                    val action =
-//                        RecipesFragmentDirections.actionRecipesFragmentToDetailsActivity(result)
-//                    recipeRowLayout.findNavController().navigate(action)
+                    val action =
+                        RecipesFragmentDirections.actionRecipesFragmentToDetailsActivity(result)
+                    recipeRowLayout.findNavController().navigate(action)
                 } catch (e: Exception) {
                     Log.d("onRecipeClickListener", e.toString())
                 }
