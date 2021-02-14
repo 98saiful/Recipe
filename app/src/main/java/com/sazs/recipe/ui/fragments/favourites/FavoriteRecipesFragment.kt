@@ -1,11 +1,8 @@
 package com.sazs.recipe.ui.fragments.favourites
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.MenuItem
-import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -40,6 +37,10 @@ class FavoriteRecipesFragment : Fragment() {
         setupRecyclerView(binding.favoriteRecipesRecyclerView)
 
         return binding.root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.favorite_recipes_menu, menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

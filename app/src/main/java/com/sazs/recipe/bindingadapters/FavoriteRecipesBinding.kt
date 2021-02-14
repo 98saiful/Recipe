@@ -1,10 +1,11 @@
-package com.sazs.recipe.adapters
+package com.sazs.recipe.bindingadapters
 
 import android.view.View
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.sazs.recipe.adapters.FavoriteRecipesAdapter
 import com.sazs.recipe.data.database.entities.FavoritesEntity
 
 class FavoriteRecipesBinding {

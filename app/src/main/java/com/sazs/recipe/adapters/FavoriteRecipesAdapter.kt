@@ -10,6 +10,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.sazs.recipe.R
 import com.sazs.recipe.data.database.entities.FavoritesEntity
 import com.sazs.recipe.databinding.FavoriteRecipesRowLayoutBinding
+import com.sazs.recipe.ui.fragments.favourites.FavoriteRecipesFragmentDirections
 import com.sazs.recipe.util.RecipesDiffUtil
 import com.sazs.recipe.viewmodels.MainViewModel
 
@@ -61,17 +62,17 @@ class FavoriteRecipesAdapter(
         /**
          * Single Click Listener
          * */
-//        holder.binding.favoriteRecipesRowLayout.setOnClickListener {
-//            if (multiSelection) {
-//                applySelection(holder, currentRecipe)
-//            } else {
-//                val action =
-//                    FavoriteRecipesFragmentDirections.actionFavoriteRecipesFragmentToDetailsActivity(
-//                        currentRecipe.result
-//                    )
-//                holder.itemView.findNavController().navigate(action)
-//            }
-//        }
+        holder.binding.favoriteRecipesRowLayout.setOnClickListener {
+            if (multiSelection) {
+                applySelection(holder, currentRecipe)
+            } else {
+                val action =
+                    FavoriteRecipesFragmentDirections.actionFavouriteRecipesFragmentToDetailsActivity(
+                        currentRecipe.result
+                    )
+                holder.itemView.findNavController().navigate(action)
+            }
+        }
 
         /**
          * Long Click Listener

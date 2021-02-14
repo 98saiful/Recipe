@@ -26,7 +26,11 @@
         android:id="@+id/favouriteRecipesFragment"
         android:name="com.sazs.recipe.ui.fragments.favourites.FavoriteRecipesFragment"
         android:label="Favourites"
-        tools:layout="@layout/fragment_favorite_recipes" />
+        tools:layout="@layout/fragment_favorite_recipes" >
+        <action
+            android:id="@+id/action_favouriteRecipesFragment_to_detailsActivity"
+            app:destination="@id/detailsActivity" />
+    </fragment>
     <dialog
         android:id="@+id/recipesBottomSheet"
         android:name="com.sazs.recipe.ui.fragments.recipes.bottomsheet.RecipesBottomSheet"
